@@ -28,7 +28,27 @@ body{background:var(--bg);color:var(--fg);font-family:'JetBrains Mono','Fira Cod
 .dim{color:var(--dim)}
 a{color:var(--blue);text-decoration:none;border-bottom:1px dashed transparent;transition:.15s}
 a:hover,a:focus-visible{color:#fff;border-bottom-color:var(--blue);outline:none}
-.tag{display:inline-block;border:1px solid #30363d;border-radius:4px;padding:0 8px;margin:2px 4px 2px 0;color:var(--green);font-size:13px}
+.tag{display:inline-block;border:1px solid #30363d;border-radius:6px;padding:1px 10px;margin:3px 4px;font-size:13px;font-weight:500;background:rgba(255,255,255,0.02)}
+
+/* Colores representativos basados en la imagen */
+.tag-html{color:#e34f26;border-color:#e34f26}
+.tag-css{color:#264de4;border-color:#264de4}
+.tag-js{color:#f7df1e;border-color:#d4b830}
+.tag-tailwind{color:#38bdf8;border-color:#0ea5e9}
+.tag-bootstrap{color:#7952b3;border-color:#7952b3}
+.tag-responsive{color:#94a3b8;border-color:#64748b}
+
+.tag-java{color:#ea2d2e;border-color:#b02525}
+.tag-python{color:#3776ab;border-color:#2b5b84}
+.tag-php{color:#8993be;border-color:#6c7eb7}
+
+.tag-mysql{color:#00758f;border-color:#00758f}
+.tag-sql{color:#22c55e;border-color:#16a34a}
+
+.tag-git{color:#f05032;border-color:#c83e24}
+.tag-github{color:#cbd5e1;border-color:#64748b}
+.tag-vscode{color:#007acc;border-color:#007acc}
+
 h1{font-size:clamp(20px,4vw,28px);color:#fff}
 .cursor{display:inline-block;width:9px;height:1.1em;background:var(--green);vertical-align:text-bottom;animation:b 1s steps(1) infinite}
 @keyframes b{50%{opacity:0}}
@@ -59,10 +79,10 @@ footer{margin-top:18px;text-align:center;color:var(--dim);font-size:12px}
     <div class="line fade" style="animation-delay:.5s">
       <div class="p">raul@madrid<span class="dim">:</span><i>~</i><span class="dim">$</span> <span class="cmd">ls -l ~/tecnologias</span></div>
       <div class="out"><ul>
-        <li><span class="k">frontend/</span> <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span><span class="tag">Responsive</span></li>
-        <li><span class="k">backend/</span>&nbsp;&nbsp;<span class="tag">Java</span><span class="tag">Python</span><span class="tag">PHP</span></li>
-        <li><span class="k">bbdd/</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">MySQL</span><span class="tag">SQL</span></li>
-        <li><span class="k">tools/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span></li>
+        <li><span class="k">frontend/</span> <span class="tag tag-html">HTML5</span><span class="tag tag-css">CSS3</span><span class="tag tag-js">JavaScript</span><span class="tag tag-tailwind">Tailwind CSS</span><span class="tag tag-bootstrap">Bootstrap</span><span class="tag tag-responsive">Responsive</span></li>
+        <li><span class="k">backend/</span>&nbsp;&nbsp;<span class="tag tag-java">Java</span><span class="tag tag-python">Python</span><span class="tag tag-php">PHP</span></li>
+        <li><span class="k">bbdd/</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag tag-mysql">MySQL</span><span class="tag tag-sql">SQL</span></li>
+        <li><span class="k">tools/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag tag-git">Git</span><span class="tag tag-github">GitHub</span><span class="tag tag-vscode">VS Code</span></li>
       </ul></div>
     </div>
 

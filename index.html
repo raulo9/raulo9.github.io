@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Raúl Oliva · Desarrollador Web</title>
+<title>Raúl Oliva García · Desarrollador Web</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@ body{background:var(--bg);color:var(--fg);font-family:'JetBrains Mono','Fira Cod
 .dim{color:var(--dim)}
 a{color:var(--blue);text-decoration:none;border-bottom:1px dashed transparent;transition:.15s}
 a:hover,a:focus-visible{color:#fff;border-bottom-color:var(--blue);outline:none}
-.tag{display:inline-block;border:1px solid #30363d;border-radius:4px;padding:0 8px;margin:2px 4px 2px 0;color:var(--green);font-size:13px}
+.tag{display:inline-block;border:1px solid var(--c);border-color:color-mix(in srgb,var(--c) 55%,transparent);background:color-mix(in srgb,var(--c) 10%,transparent);border-radius:4px;padding:0 8px;margin:2px 4px 2px 0;color:var(--c);font-size:13px;transition:.15s}.tag:hover{background:color-mix(in srgb,var(--c) 22%,transparent)}
 h1{font-size:clamp(20px,4vw,28px);color:#fff}
 .cursor{display:inline-block;width:9px;height:1.1em;background:var(--green);vertical-align:text-bottom;animation:b 1s steps(1) infinite}
 @keyframes b{50%{opacity:0}}
@@ -48,7 +48,7 @@ footer{margin-top:18px;text-align:center;color:var(--dim);font-size:12px}
 
     <div class="line fade" style="animation-delay:.1s">
       <div class="p">raul@madrid<span class="dim">:</span><i>~</i><span class="dim">$</span> <span class="cmd">whoami</span></div>
-      <div class="out"><h1>Raúl Oliva</h1><span class="dim">Desarrollador de Aplicaciones Web (DAW) · Madrid</span></div>
+      <div class="out"><h1>Raúl Oliva García</h1><span class="dim">Desarrollador de Aplicaciones Web (DAW) · Madrid</span></div>
     </div>
 
     <div class="line fade" style="animation-delay:.3s">
@@ -59,10 +59,10 @@ footer{margin-top:18px;text-align:center;color:var(--dim);font-size:12px}
     <div class="line fade" style="animation-delay:.5s">
       <div class="p">raul@madrid<span class="dim">:</span><i>~</i><span class="dim">$</span> <span class="cmd">ls -l ~/tecnologias</span></div>
       <div class="out"><ul>
-        <li><span class="k">frontend/</span> <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span><span class="tag">Responsive</span></li>
-        <li><span class="k">backend/</span>&nbsp;&nbsp;<span class="tag">Java</span><span class="tag">Python</span><span class="tag">PHP</span></li>
-        <li><span class="k">bbdd/</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">MySQL</span><span class="tag">SQL</span></li>
-        <li><span class="k">tools/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span></li>
+        <li><span class="k">frontend/</span> <span class="tag" style="--c:#E34F26">HTML5</span><span class="tag" style="--c:#1572B6">CSS3</span><span class="tag" style="--c:#F7DF1E">JavaScript</span><span class="tag" style="--c:#38BDF8">Tailwind CSS</span><span class="tag" style="--c:#9B6BF2">Bootstrap</span><span class="tag" style="--c:#1ABC9C">Responsive</span></li>
+        <li><span class="k">backend/</span>&nbsp;&nbsp;<span class="tag" style="--c:#ED8B00">Java</span><span class="tag" style="--c:#4B8BBE">Python</span><span class="tag" style="--c:#8892BF">PHP</span></li>
+        <li><span class="k">bbdd/</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag" style="--c:#4479A1">MySQL</span><span class="tag" style="--c:#F29111">SQL</span></li>
+        <li><span class="k">tools/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag" style="--c:#F05032">Git</span><span class="tag" style="--c:#F0F6FC">GitHub</span><span class="tag" style="--c:#2F9BE0">VS Code</span></li>
       </ul></div>
     </div>
 
@@ -70,8 +70,8 @@ footer{margin-top:18px;text-align:center;color:var(--dim);font-size:12px}
       <div class="p">raul@madrid<span class="dim">:</span><i>~</i><span class="dim">$</span> <span class="cmd">ls ~/proyectos</span></div>
       <div class="out"><ul>
         <li>📁 <a href="https://github.com/raulo9/raulo9.github.io">raulo9.github.io</a> <span class="dim">— Portfolio personal publicado en GitHub Pages</span></li>
-        <li>📁 <a href="https://github.com/raulo9/web-adaptable">web-adaptable</a> <span class="dim">— Maquetación responsive para móvil, tableta y ordenador</span></li>
-        <li>📁 <a href="https://github.com/raulo9/crm-mapfre-web">crm-mapfre-web</a> <span class="dim">— Plataforma web tipo CRM con base de datos</span></li>
+        <li>📁 <a href="https://gtaresponsive.netlify.app/" target="_blank" rel="noopener">web-adaptable</a> <span class="dim">— Maquetación responsive para móvil, tableta y ordenador · </span><a href="https://github.com/raulo9/web-adaptable">código</a></li>
+        <li>📁 <a href="https://raulo9.github.io/crm-mapfre-web/" target="_blank" rel="noopener">crm-mapfre-web</a> <span class="dim">— Plataforma web tipo CRM con base de datos · </span><a href="https://github.com/raulo9/crm-mapfre-web">código</a></li>
       </ul></div>
     </div>
 
@@ -90,6 +90,6 @@ footer{margin-top:18px;text-align:center;color:var(--dim);font-size:12px}
 
   </div>
 </main>
-<footer>© Raúl Oliva · hecho con HTML y CSS</footer>
+<footer>© Raúl Oliva García · hecho con HTML y CSS</footer>
 </body>
 </html>

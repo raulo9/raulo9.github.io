@@ -1,0 +1,218 @@
+/* Variables de colores para toda la web */
+:root {
+  --bg: #0d1117;
+  --win: #161b22;
+  --bar: #21262d;
+  --fg: #c9d1d9;
+  --dim: #8b949e;
+  --green: #3fb950;
+  --blue: #58a6ff;
+  --yellow: #e3b341;
+  --red: #ff5f56;
+  --ora: #ffbd2e;
+  --grn: #27c93f;
+}
+
+/* Reseteo basico para quitar margenes y ajustar bordes */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Activacion del desplazamiento suave en toda la web */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos del fondo general texto y fuente principal */
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+  padding: clamp(12px, 4vw, 48px);
+}
+
+/* Caja principal que simula la ventana de comandos */
+.term {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--win);
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+/* Barra superior de la ventana de comandos */
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bar);
+  padding: 10px 14px;
+}
+
+/* Botones de colores cerrar minimizar y maximizar */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Texto de la barra superior */
+.bar .t {
+  margin-left: 10px;
+  color: var(--dim);
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Margenes interiores del contenido de la ventana */
+.body {
+  padding: clamp(16px, 3vw, 28px);
+}
+
+/* Separacion entre cada bloque de comandos */
+.line {
+  margin-top: 22px;
+}
+
+/* El primer comando no necesita margen arriba */
+.line:first-child {
+  margin-top: 0;
+}
+
+/* Color y grosor del texto del usuario en el comando */
+.p {
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* Color azul para la ruta del comando */
+.p i {
+  color: var(--blue);
+  font-style: normal;
+}
+
+/* Color blanco para el comando escrito */
+.cmd {
+  color: #fff;
+}
+
+/* Color y margen del resultado del comando */
+.out {
+  margin: 6px 0 0 0;
+  color: var(--fg);
+}
+
+/* Quitar puntos de las listas en los resultados */
+.out ul {
+  list-style: none;
+}
+
+/* Color amarillo para destacar palabras o carpetas */
+.k {
+  color: var(--yellow);
+}
+
+/* Color gris oscuro para textos secundarios */
+.dim {
+  color: var(--dim);
+}
+
+/* Estilos de los enlaces interactivos */
+a {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: 0.15s;
+}
+
+/* Efecto al pasar el raton por los enlaces */
+a:hover, a:focus-visible {
+  color: #fff;
+  border-bottom-color: var(--blue);
+  outline: none;
+}
+
+/* Cajas pequenas para las tecnologias usadas */
+.tag {
+  display: inline-block;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1px 10px;
+  margin: 3px 4px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Colores especificos para cada tecnologia de la lista */
+.tag-html { color: #e34f26; border-color: #e34f26; }
+.tag-css { color: #264de4; border-color: #264de4; }
+.tag-js { color: #f7df1e; border-color: #d4b830; }
+.tag-tailwind { color: #38bdf8; border-color: #0ea5e9; }
+.tag-bootstrap { color: #7952b3; border-color: #7952b3; }
+.tag-responsive { color: #94a3b8; border-color: #64748b; }
+.tag-java { color: #ea2d2e; border-color: #b02525; }
+.tag-python { color: #3776ab; border-color: #2b5b84; }
+.tag-php { color: #8993be; border-color: #6c7eb7; }
+.tag-mysql { color: #00758f; border-color: #00758f; }
+.tag-sql { color: #22c55e; border-color: #16a34a; }
+.tag-git { color: #f05032; border-color: #c83e24; }
+.tag-github { color: #cbd5e1; border-color: #64748b; }
+.tag-vscode { color: #007acc; border-color: #007acc; }
+
+/* Titulo principal adaptado segun la pantalla */
+h1 {
+  font-size: clamp(20px, 4vw, 28px);
+  color: #fff;
+}
+
+/* Cuadrado verde que simula la escritura en consola */
+.cursor {
+  display: inline-block;
+  width: 9px;
+  height: 1.1em;
+  background: var(--green);
+  vertical-align: text-bottom;
+  animation: b 1s steps(1) infinite;
+}
+
+/* Animacion para el parpadeo del cursor */
+@keyframes b {
+  50% { opacity: 0; }
+}
+
+/* Transicion para que los bloques aparezcan poco a poco */
+.fade {
+  opacity: 0;
+  animation: f 0.5s forwards;
+}
+
+/* Animacion de aparicion */
+@keyframes f {
+  to { opacity: 1; }
+}
+
+/* Anular animaciones si el usuario las tiene quitadas en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  .cursor, .fade {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Pie de pagina con texto pequeno y centrado */
+footer {
+  margin-top: 18px;
+  text-align: center;
+  color: var(--dim);
+  font-size: 12px;
+}
